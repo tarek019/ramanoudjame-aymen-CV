@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TBR Design</title>
+
+    <link
+    rel="shortcut icon"
+    href="light.png"
+    type="image/png"
+    id="faviconTag"
+    />
+
+    <script>
+      const faviconTag = document.getElementById("faviconTag");
+      const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+      const changeFavicon = () => {
+        if (isDark.matches) faviconTag.href = "dark.png";
+        else faviconTag.href = "light.png";
+      };
+      changeFavicon();
+      isDark.addEventListener("change", changeFavicon);
+      // isDark.addListener(changeFavicon);
+    </script>
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+
+  </head>
+  <body>
+
+  <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar -->
+  <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar -->
+  
+
+  
+  <div class="mode">
+    <div >
+      <a href="#" id="js-top" class="back-btn">
+        <i class="fas fa-chevron-up"></i>
+        <div id="js-top2" class="back-btn-wrap"></div>
+      </a>
+    </div>
+    <div class="mode-btn" >
+    <input type="checkbox" onclick="myFunctionX()" id="toggle-theme" />
+    <label for="toggle-theme">
+      <!-- sun svg --> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;"><path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>
+      <!-- moon svg -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;"><path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z"></path></svg>
+    </label>
+  </div>
+  </div>
+
+  <aside>
+    <div class="sidebar">
+      <div class="logo-details">
+        <img class=icon src="./img/tbr-sidebar-white.png" />
+        <div class="logo_name"><a id="TBR">TBR </a><a id="Design">Design</a></div>
+          <i class='bx bx-menu' id="btn" ></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+            <i class='bx bx-search' ></i>
+           <input type="text" placeholder="Search...">
+           <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+           <i class='bx bx-home-smile' ></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#services">
+           <i class='bx bx-grid-alt'></i>
+            <span  class="links_name">Services</span>
+          </a>
+          <span class="tooltip">Services</span>
+        </li>
+        <li>  
+         <a href="#portfolio">
+           <i class='bx bx-folder' ></i>
+           <span class="links_name">Portfolio</span>
+         </a>
+         <span class="tooltip">Portfolio</span>
+       </li>
+        <li>
+          <a href="#about">
+           <i class='bx bx-user' ></i>
+            <span class="links_name">About</span>
+          </a>
+          <span class="tooltip">About</span>
+        </li>
+        <li>
+          <a href="#testimonials">
+            <i class='bx bx-heart' ></i>
+            <span class="links_name">Testimonials</span>
+          </a>
+          <span class="tooltip">Testimonials</span>
+        </li>
+        <li>
+          <a href="#contact">
+           <i class='bx bx-chat' ></i>
+            <span class="links_name">Contact</span>
+          </a>
+          <span class="tooltip">Contact</span>
+        </li>
+        <li>
+         <a href="#hireme">
+           <i class='bx bx-crown'></i>
+           <span class="links_name">Hire Me</span>
+         </a>
+         <span class="tooltip">Hire Me</span>
+       </li>
+
+      </ul>
+    </div>
+  </aside>
+  
+    <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar -->
+    <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar --> <!-- Sidebar -->
+
+   
+      <header id="header">
+        <div id="get2h3" class="overlay overlay-lg">
+          <img src="./img/shapes/square.png" class="shape square" alt="" />
+          <img src="./img/shapes/circle.png" class="shape circle" alt="" />
+          <img
+            src="./img/shapes/half-circle.png"
+            class="shape half-circle1"
+            alt=""
+          />
+          <img
+            src="./img/shapes/half-circle.png"
+            class="shape half-circle2"
+            alt=""
+          />
+          <img src="./img/shapes/x.png" class="shape xshape" alt="" />
+          <img src="./img/shapes/wave.png" class="shape wave wave1" alt="" />
+          <img src="./img/shapes/wave.png" class="shape wave wave2" alt="" />
+          <img src="./img/shapes/triangle.png" class="shape triangle" alt="" />
+          <img src="./img/shapes/letters.png" class="letters" alt="" />
+          <img src="./img/shapes/points1.png" class="points points1" alt="" />
+        </div>
+
+        <nav>
+         <!--
+            <div class="container">
+            <div class="logo">
+              <img src="./img/logo.png" alt="" />
+            </div>
+         -->
+            <div class="links">
+              <ul>
+                <li>
+                  <a href="#header">Home</a>
+                </li>
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+                <li>
+                  <a href="#hireme" class="active">Hire me</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="hamburger-menu">
+              <div class="bar-bg"></div>
+              <div class="bar"></div>
+              
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-content">
+          <div class="container grid-2">
+            <div id="column-1" class="column-1">
+              <h1 id="pwhite" class="header-title">TBR Design</h1>
+              <p class="text" id="text01">
+                Wlcm, to the DESIGN PARADISE!
+              </p>
+             <a id="btnmargin" class="btn" href="#portfolio" >View Portfolio</a>
+             <a id="btnmargin2"class="btn" href="./assests/tbr.pdf" target="popup" >Download CV</a>
+              
+            </div>
+
+            <div class="column-2 image">
+              <img
+                src="./img/shapes/points2.png"
+                class="points points2"
+                alt=""
+              />
+           
+              <img src="./img/tbr-logo-white.png" id="logo01" class="img-element z-index" alt="" />
+              <img src="./img/tbr-logo-black.png" id="logo02" class="img-element z-index" alt="" />
+          
+          </div>
+          </div>
+        </div>
+
+      </header>
+
+      <main>
+
+      <section class="services section" id="services">
+  
+        <div class="container">
+
+          <div class="section-header">
+            <h3 class="title" data-title="What I Do">Services</h3>
+            <p  class="text">
+              Our work has demonstrated significant achievements in business growth and brand development helping our clients to garner lasting results. We hope to provide you with similar success through our outstanding graphic design services.
+            </p>
+          </div>
+
+          <div class="cards">
+            <div class="card-wrap">
+              <img
+                src="./img/shapes/points3.png"
+                class="points points1 points-sq"
+                alt=""
+              />
+              <div class="card" data-card="UI/UX">
+                <div class="card-content z-index">
+                  <img src="./img/design-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">Graphic Design</h3>
+                  <p class="text">
+                    Create the visual versions of your ideas,
+                    and help people get your messages across in ways that are memorable, effective, and aesthetically pleasing.
+                  </p>
+                  <a href="#contact" class="btn small">Order Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-wrap">
+              <div class="card" data-card="Code">
+                <div class="card-content z-index">
+                  <img src="./img/code-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">Video Editing</h3>
+                  <p class="text">
+                    Go above and beyond.
+                    Discover new creative ideas, and bring new perspectives to the table, all while making sure your whishes are met.
+                  </p>
+                  <a href="#contact" class="btn small">Order Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-wrap">
+              <img
+                src="./img/shapes/points3.png"
+                class="points points2 points-sq"
+                alt=""
+              />
+              <div class="card" data-card="App">
+                <div class="card-content z-index">
+                  <img src="./img/app-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">Animation</h3>
+                  <p class="text">
+                    Everyone has a story to tell.
+                    <br> Yours is much more powerful than you know.
+                    We bring your ideas to life and make the intangible tangible.
+                  </p>
+                  <a href="#contact" class="btn small">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="portfolio section" id="portfolio">
+        <div class="background-bg">
+          <div class="overlay overlay-sm">
+            <img
+              src="./img/shapes/half-circle.png"
+              class="shape half-circle1"
+              alt=""
+            />
+            <img
+              src="./img/shapes/half-circle.png"
+              class="shape half-circle2"
+              alt=""
+            />
+            <img src="./img/shapes/square.png" class="shape square" alt="" />
+            <img src="./img/shapes/wave.png" class="shape wave" alt="" />
+            <img src="./img/shapes/circle.png" class="shape circle" alt="" />
+            <img
+              src="./img/shapes/triangle.png"
+              class="shape triangle"
+              alt=""
+            />
+            <img src="./img/shapes/x.png" class="shape xshape" alt="" />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="My works">Portfolio</h3>
+          </div>
+
+          <div class="section-body">
+
+            <div class="button-group-home filters-button-group">
+
+              <button class="button is-checked" data-filter="*">All</button>
+              <button class="button" data-filter=".logo-design">Logo Design</button>
+              <button class="button" data-filter=".illustrations">Illustrations</button>
+              <button class="button" data-filter=".video-editing">Video Editing</button>
+              <button class="button" data-filter=".short-movies">Short Movies</button>
+              <button class="button" data-filter=".photo-manupulation">Photo Manupulation</button>
+
+            </div>
+
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+  
+
+      
+
+   <div class="grid" id="grid">
+        <div class="element-item illustrations">
+          <div class="gallery-image">
+            <iframe src="https://www.youtube.com/embed/CWd6LiXFdiQ"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+      
+
+        <div class="element-item logo-design">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+          </div>
+        </div>
+
+        <div class="element-item logo-design">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Logo Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item video-editing">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item video-editing">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item logo-design">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Logo Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item short-movies">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item short-movies">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item photo-manupulation">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="element-item short-movies">
+          <div class="gallery-image">
+            <img src="./assests/01.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+          <div class="centrha" >
+            <div class="centro" >
+            <button type="button" class="button0 showMore" id="showMore">
+              <span class="button__text" >MORE FOLIO</span>
+          </button>
+        </div>
+          </div>
+</div>
+</div>
+
+</section>  
+
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Who Am I">About me</h3>
+          </div>
+
+          <div class="section-body grid-2">
+            <div class="column-1">
+              <h3 id="pwhite" class="title-sm">Aymen Ramanoudjame,</h3>
+              <p class="text">
+                SATISFACTION OR REFUND is my promise, 24/7 Support I'm completely at your disposal. Whereas I offer you professional & unique on-demand video, photo editing, and logo design.
+
+              </p>
+              <p class="text">
+                 I use adobe creative cloud products to produce the best and the highest possible quality, considering that adobe products are the best in their field with a huge amount of carefully polished skills! 
+              </p>
+              <p class="text"> 
+                I have a long career since 2012, yes 9 years of experience in social media and content creation what gave me a huge knowledge and passion ... 
+             </p>
+             <p class="text"> 
+              Feel free to contact me if u ever needed or wanted to be happy!
+             </p>
+              <div class="skills">
+                <div class="skill html">
+                  <h3 id="pwhite" class="skill-title">Graphic Design</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="95%"></div>
+                  </div>
+                </div>
+                <div class="skill css">
+                  <h3 id="pwhite" class="skill-title">Video Editing</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85%"></div>
+                  </div>
+                </div>
+                <div class="skill js">
+                  <h3 id="pwhite" class="skill-title">Animation</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90%"></div>
+                  </div>
+                </div>
+              </div>
+             <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+
+            <div class="column-2 image">
+              <img src="./img/shapes/points4.png" class="points" alt="" />
+              <img src="./img/about.png" class="z-index" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="records">
+        <div class="overlay overlay-sm">
+          <img src="./img/shapes/square.png" alt="" class="shape square1" />
+          <img src="./img/shapes/square.png" alt="" class="shape square2" />
+          <img src="./img/shapes/circle.png" alt="" class="shape circle" />
+          <img
+            src="./img/shapes/half-circle.png"
+            alt=""
+            class="shape half-circle"
+          />
+          <img src="./img/shapes/wave.png" alt="" class="shape wave wave1" />
+          <img src="./img/shapes/wave.png" alt="" class="shape wave wave2" />
+          <img src="./img/shapes/x.png" alt="" class="shape xshape" />
+          <img src="./img/shapes/triangle.png" alt="" class="shape triangle" />
+        </div>
+
+        <div class="container">
+          <div class="wrap">
+            <div class="record-circle">
+              <h2 class="number" data-num="193">0</h2>
+              <h4 class="sub-title">Projects</h4>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="record-circle active">
+              <h2 class="number" data-num="18">0</h2>
+              <h4 class="sub-title">Happy Clients</h4>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="record-circle">
+              <h2 class="number" data-num="439">0</h2>
+              <h4 class="sub-title">Work Hour</h4>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="record-circle">
+              <h2 class="number" data-num="11">0</h2>
+              <h4 class="sub-title">Awards</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="What People Say">Testimonials</h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      He made sure everything was perfect and was very generous with pricing and revisions.
+                      He helped my idea come to life and I would highly recommend his services.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name">Tweetish Turtle</h3>
+                      <h5 id="pwhite" class="review-job">Content Creator, United States</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      A really talented artist and kept me in the loop with the creation of our logo.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name">Murphy</h3>
+                      <h5 id="pwhite" class="review-job">Content Creator, United Kingdom</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      Outstanding work! exceeded my expectations i highly recommend.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name">Philstoic</h3>
+                      <h5 id="pwhite" class="review-job">Freelancer, France</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      Very fast. Good communication and got additional requests extra.
+                      Will come back for our next designs.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name">Joris</h3>
+                      <h5 id="pwhite" class="review-job">JouwTech CEO, Netherlands</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      TBR was an absolute pleasure to work with.
+                      He's communicative, generous, punctual, and very talented.
+                      I will be working with him lots in the future and would definitely recommend his work.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name">Haydn</h3>
+                      <h5 id="pwhite" class="review-job">Haydn Media CEO, Canada</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      Awesome talent. He is able to understand the requirement perfectly and is able to provide more than satisfactory solution.
+                      I would recommend his service to anyone looking to use his talent.
+                      I myself has used his service many times and looking forward for new contracts in the future
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name">Sinu Joseph</h3>
+                      <h5 id="pwhite" class="review-job">Selektial CEO, India</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p id="pwhite" class="review-text">
+                      صبور ومتفاني بالعمل شكراً لهذا المجهود المميز، سأتعامل معك دائماً بإذن الله
+                    </p>
+
+                    <div class="review-info">
+                      <h3 id="pwhite" class="review-name"> Abu Mohammed Esherif</h3>
+                      <h5 id="pwhite" class="review-job">Business Man, Saudi Arabia</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class='bx bxs-left-arrow'></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class='bx bxs-right-arrow'></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="column-2 image">
+              <img src="./img/testi.png" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="contact-info">
+              <h3 id="geth3" class="title">Get in touch</h3>
+              <p class="text">
+                While the exact milestone completion dates may vary by one or two days, we stick to a tight schedule and follow the process. Let's discuss it more...
+              </p>
+              <div class="information-wrap">
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <p class="info-text">Constantine, Algeria</p>
+                </div>
+
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </div>
+                  <p class="info-text">info@tbr.design</p>
+                </div>
+
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <p class="info-text">(+213) 541 55 42 63</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="followme">
+                  <h3 id="geth3" class="title">Follow me</h3>
+                  <div class="social-media">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h3 id="geth3" class="title">Contact me</h3>
+              <form action="#" method="POST">
+
+              <div class="row">
+                <input
+                  name="name"
+                  type="text"
+                  class="contact-input"
+                  placeholder="First Name"
+                />
+                <input
+                  name="website"
+                  type="text"
+                  class="contact-input"
+                  placeholder="Last Name"
+                />
+             
+
+              </div>
+
+              <div class="row">
+                <input required="required" name="subject" type="text" class="contact-input" placeholder="Subject" />
+                <input required="required" name="email" type="email" class="contact-input" placeholder="Email" />
+              
+  
+              </div>
+
+              <div class="row">
+
+                <textarea
+                  required="required"
+                  name="message"
+                  class="contact-input textarea"
+                  placeholder="Message"
+                ></textarea>
+             
+
+              </div>
+              <div class="button-area">
+                <button type="submit">Send Message</button>
+                <span></span>
+              <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Thank You! Your message has been sent.</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            </div>
+
+          </div>
+        </div>
+
+       
+      <!-- <button id="myBtn">Open Modal</button> -->
+        
+
+      </section>
+
+      <section class="hireme" id="hireme">
+        <div class="container">
+          <h3 class="title">Let's talk about a project</h3>
+          <p class="text">
+            The goal of a creative process in graphic design is to set clear milestones and deadlines ensuring timely delivery of the project.
+            By its own nature, creativity is hard to harness into a predictable and linear set of stages, but it is extremely important to do so!
+          </p>
+          <a href="#" class="btn">Hire me</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <h3 class="title-sm">About</h3>
+            <p class="text" id="about-text">
+              Maybe im not the only designer on earth but i can be your best
+              <span>OPTION.</span>
+            </p>
+
+            <div class="followme-wrap">
+              <div class="followme">
+                <h3>Follow me</h3>
+                <span class="footer-line"></span>
+                <div class="social-media">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Services</h3>
+            <ul>
+              <li>
+                <a href="#">Graphic Design</a>
+              </li>
+              <li>
+                <a href="#">Video Editing</a>
+              </li>
+              <li>
+                <a href="#">Animation</a>
+              </li>
+              <li>
+                <a href="#">Short Movies</a>
+              </li>
+              <li>
+                <a href="#">Photo Manupulation</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-newstletter">
+            <h3 class="title-sm">Subscribe</h3>
+            <p class="text">
+              Join US, in case you are a DSIGNER or WEB DEV.
+            </p>
+            <div class="footer-input-wrap">
+              <input type="email" class="footer-input" placeholder="Email" />
+              <a href="#" class="input-arrow">
+                <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bottom-footer">
+          <div class="copyright">
+            <p class="text">
+              Copyright&copy;2022 All rights reserved | TBR.
+              <span>To Be Real</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    
+    <script src="./js/app.js"></script>
+    <script src="./js/isotope.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/scrollup.js"></script>
+    <script src="form17.js"></script>
+
+
+  </body>
+</html>
